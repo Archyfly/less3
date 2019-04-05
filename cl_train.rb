@@ -1,7 +1,6 @@
 #require "cl_route"
 class Train
-  attr_accessor :number, :brake
-  attr_accessor :carri, :speed
+  attr_accessor :number, :carri, :speed
   #attr_writer :type
   def initialize (number, carri, type, speed = 0)
     @number = number
