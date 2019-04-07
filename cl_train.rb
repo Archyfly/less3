@@ -1,7 +1,6 @@
-#require "cl_route"
+require "./cl_route"
 class Train
   attr_accessor :number, :carriage, :speed
-  #attr_writer :type
   def initialize(number, carriage, type, speed = 0)
     @number = number
     @carriage = carriage
@@ -13,25 +12,34 @@ class Train
     puts "Train #{@number} has #{@carriage} railway_carriages. Type of train: #{@type}. Train has speed #{@speed}"
   end
   def carriage_add
-  	@carriage = @carriage + 1
+  	if @speed != 0 
+  	  puts "Carriage cannot be added! Speed = #{@speed}"
+  	else 
+  	  @carriage = @carriage + 1
+  	  puts "Carriage has been added. Train has #{@carriage} railway_carriages now." 
+    end
   end
   def carriage_del
   	if @speed != 0 
-  	    puts "Train on route. Speed = #{@speed}"
-  	elsif  
-  	  @carriage > 0
+  	  puts "Train on route. Speed = #{@speed}"
+  	elsif @carriage > 0
   	  @carriage = @carriage - 1
   	  puts "Carriage has been deleted. Train has #{@carriage} railway_carriages now."   			
     else 
   	  puts "Carriage hasn't railway_carriages."   			
     end
   end
+
   def brake
     @speed = 0
   	puts "Train stopped!"
   end
+  
   def speed_up(speed_up)
   	@speed += speed_up
+  end
+  def train_on_route(number, station)
+  	puts "Train #{@number} at #{@start_station} went to route #{@route}"
   end
 end
 
@@ -50,3 +58,6 @@ train1.carriage_del
 train1.carriage_del
 train1.carriage_del
 train1.display_train_info (182)
+train1.carriage_add
+train1.speed_up(20)
+train1.carriage_add

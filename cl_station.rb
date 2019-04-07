@@ -1,7 +1,7 @@
 require "./cl_train.rb"
 
 class Station
-  def initialize (name)
+  def initialize(name)
     @name = name
     puts "New station created. Name of station: #{name}"
     @train_on_station = []
@@ -9,13 +9,13 @@ class Station
   def display_trains_on_station
   	puts "Train on station now is: #{@train_on_station}"
   end
-  def train_arrived (number)
+  def train_arrived(number)
     puts "Train arrived on the station #{@name}"
     @train_on_station << number
     puts "Trains on the station now is #{@train_on_station}"
 
   end
-  def train_departure (number)
+  def train_departure(number)
   	@train_on_station.delete (number)
   	puts "Train #{number} departed from #{@name}"
   end

@@ -2,7 +2,7 @@
 class Route
   attr_accessor :substation, :route
   
-  def initialize (start_station, end_station)
+  def initialize(start_station, end_station)
     @start_station = start_station
     @end_station = end_station
     @route = [@start_station, @end_station]
@@ -23,13 +23,13 @@ class Route
   end
 end
 
-route1 = Route.new('Irkutsk', 'Moscow')
-route1.display
-route1.add_station_after('Irkutsk', 'Yurga')
-route1.display
-route1.add_station_after('Yurga', 'Novosib')
-route1.display
-route1.add_station_after('Novosib', 'Kazan')
-route1.display
-route1.del_station_from_route('Kazan')
-route1.display
+#route1 = Route.new('Irkutsk', 'Moscow')
+#route1.display
+#route1.add_station_after('Irkutsk', 'Yurga')
+#route1.display
+#route1.add_station_after('Yurga', 'Novosib')
+#route1.display
+#route1.add_station_after('Novosib', 'Kazan')
+#route1.display
+#route1.del_station_from_route('Kazan')
+#route1.display
