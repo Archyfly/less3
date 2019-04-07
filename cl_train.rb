@@ -26,6 +26,10 @@ class Train
     	@speed = 0
   	puts "Train stopped!"
   end
+  def speed_up(speed_up)
+  	@speed += speed_up
+  end
+
 end
 
 train1 = Train.new('182', 2, 'pass')
