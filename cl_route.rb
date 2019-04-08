@@ -21,12 +21,6 @@ class Route
   def display
     puts "route = #{@route}"
   end
-=begin 
-  def train_on_route(number, start_station)
-  	puts "Train #{@number} at #{@start_station} went to route #{@route}"
-  end
-=end
-
 end
 
 #route1 = Route.new('Irkutsk', 'Moscow')

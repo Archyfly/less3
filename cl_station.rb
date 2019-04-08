@@ -1,4 +1,4 @@
-include "./cl_train.rb"
+require "./cl_train.rb"
 
 class Station
   def initialize(name)
