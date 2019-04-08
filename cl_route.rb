@@ -10,7 +10,6 @@ class Route
 
   def add_station_after(substation_before, substation)
     index_before = @route.index(substation_before)
-    #puts "index_before = #{index_before}"
     @route.insert(index_before+1, substation)
   end
 

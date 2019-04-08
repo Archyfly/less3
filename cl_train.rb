@@ -45,7 +45,6 @@ class Train
   
   def train_on_route(number, station) # получаем маршрут - массив из route
   	station.each { |stat| @position << stat } # переписываем маршрут в position для дальнейшей работы
-  	puts @position
   	puts "Train #{@number} arrived at #{@position[0]}"
     self.brake
     @train_pos_now = 0
